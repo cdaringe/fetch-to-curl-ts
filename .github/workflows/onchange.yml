@@ -1,0 +1,34 @@
+name: onchange
+on:
+  pull_request: {}
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      # - uses: wagoid/commitlint-github-action@v5
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22.1.0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: checks
+        run: |
+          pnpm install
+          pnpm format:check
+          pnpm test
+          pnpm build
+      - name: Release Dry Run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm semantic-release --dry-run

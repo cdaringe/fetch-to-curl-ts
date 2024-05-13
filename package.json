@@ -1,0 +1,52 @@
+{
+  "name": "fetch-to-curl-ts",
+  "version": "0.0.1",
+  "description": "Convert fetch HTTP request to curl",
+  "main": "dist/index.js",
+  "contributors": [
+    "cdaringe",
+    "Leonard Krause"
+  ],
+  "author": "cdaringe",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "node -r 'ts-node/register' --test src/__test__/main.test.ts",
+    "test:cov": "node -r 'ts-node/register'  --experimental-test-coverage --test src/__test__/main.test.ts",
+    "format": "biome format . --write",
+    "format:check": "biome format ."
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "types/main.d.ts",
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@types/node": "20.12.11",
+    "@types/node-fetch": "2.6.11",
+    "node-fetch": "2",
+    "npm-run-all2": "6.1.2",
+    "semantic-release": "23.1.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.5"
+  },
+  "peerDependencies": {
+    "@types/node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoek/fetch-to-curl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leoek/fetch-to-curl/issues"
+  },
+  "homepage": "https://github.com/leoek/fetch-to-curl#readme",
+  "keywords": [
+    "curl",
+    "fetch",
+    "http",
+    "request-http",
+    "debug",
+    "react-native"
+  ]
+}
