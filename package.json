@@ -47,7 +47,9 @@
     "http",
     "request-http",
     "debug",
-    "react-native"
+    "react-native",
+    "typescript",
+    "stream"
   ],
   "release": {
     "branches": [
