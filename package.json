@@ -19,7 +19,7 @@
   "files": [
     "dist"
   ],
-  "types": "types/main.d.ts",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
     "@types/node": "20.12.11",
