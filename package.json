@@ -1,6 +1,6 @@
 {
   "name": "fetch-to-curl-ts",
-  "version": "0.0.1",
+  "version": "0.0.0-semantic-release",
   "description": "Convert fetch HTTP request to curl",
   "main": "dist/index.js",
   "contributors": [
