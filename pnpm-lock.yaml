@@ -24,7 +24,7 @@ importers:
         specifier: 6.1.2
         version: 6.1.2
       semantic-release:
-        specifier: 23.1.1
+        specifier: ^23
         version: 23.1.1(typescript@5.4.5)
       ts-node:
         specifier: 10.9.2
