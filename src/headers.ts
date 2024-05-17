@@ -1,5 +1,5 @@
 type HeadersRecord = Record<string, string | string[]>;
-export type HeadersLike = Iterable<[string, string]> | HeadersRecord;
+export type HeadersLike = Iterable<[string, string]> | HeadersRecord | Required<RequestInit>["headers"];
 
 export const toTupleArray = (headers: HeadersLike): [string, string][] =>
   "entries" in headers && typeof headers.entries === "function"
